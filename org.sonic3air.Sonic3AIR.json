@@ -145,7 +145,7 @@
                     "type" : "git",
                     "url" : "https://github.com/Kekun/sonic3air-launcher.git",
                     "branch" : "main",
-                    "commit" : "548b1191406a19331e8fa66f87d4fa0fd740cdb3"
+                    "commit" : "85d2221e2dff3cd716a898096d139a063fee562d"
                 }
             ]
         }
