@@ -1,8 +1,8 @@
 {
     "app-id" : "org.sonic3air.Sonic3AIR",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
-    "sdk" : "org.gnome.Sdk",
+    "runtime" : "org.freedesktop.Platform",
+    "runtime-version" : "21.08",
+    "sdk" : "org.freedesktop.Sdk",
     "command" : "sonic3air",
     "finish-args" : [
         "--share=ipc",
@@ -26,16 +26,11 @@
         "/share/man",
         "/share/pkgconfig",
         "*.la",
-        "*.a",
-        "/lib/girepository-1.0",
-        "/share/gir-1.0",
-        "/bin/gtk4*",
-        "/bin/pango*",
-        "/bin/sassc"
+        "*.a"
     ],
     "modules" : [
         {
-            "name" : "libadwaita",
+            "name" : "libhandy",
             "buildsystem" : "meson",
             "config-opts" : [
                 "-Dexamples=false",
@@ -45,8 +40,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "commit" : "ffb6b435c7da83c210a8f8a53af5082f6ed3816b"
+                    "url" : "https://gitlab.gnome.org/GNOME/libhandy.git",
+                    "commit" : "f8626427acebfa08b2b4ee1166d51e416d3d7407"
                 }
             ]
         },
@@ -57,14 +52,16 @@
                 "install -Dp -m 755 sonic3air /app/bin/sonic3air",
                 "install -Dp -m 755 sonic3air_linux /app/bin/sonic3air_linux",
                 "install -Dp -m 644 libdiscord_game_sdk.so /app/lib/libdiscord_game_sdk.so",
+                "cp -r bonus /app/bin",
                 "cp -r data /app/bin",
+                "cp -r doc /app/bin",
                 "install -Dp -m 644 config.json /app/bin/config.json"
             ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/Kekun/sonic3air-launcher/releases/download/v21.04.24.0-flathub/sonic3air_preview.tar.gz",
-                    "sha256" : "998ffdc1b7879681ee6bc67bebfaa05a201cb642a7bac520365c5cb20235cd4a"
+                    "url" : "https://github.com/HugLifeTiZ/sonic3air-launcher/releases/download/v21.09.12.0-flathub/sonic3air_game.tar.gz",
+                    "sha256" : "43c31721b3abf048d79c070da6592b2f04234730a27b78002f387afad41deb50"
                 },
                 {
                     "type" : "script",
@@ -83,9 +80,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/Kekun/sonic3air-launcher.git",
-                    "branch" : "main",
-                    "commit" : "711904992931774daeec490ea251b96e1f732f1d"
+                    "url" : "https://github.com/HugLifeTiZ/sonic3air-launcher.git",
+                    "branch" : "main"
                 }
             ]
         }
