@@ -1,7 +1,7 @@
 {
     "app-id" : "org.sonic3air.Sonic3AIR",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "42",
     "sdk" : "org.gnome.Sdk",
     "command" : "sonic3air",
     "finish-args" : [
@@ -63,8 +63,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/Kekun/sonic3air-launcher/releases/download/v21.04.24.0-flathub/sonic3air_preview.tar.gz",
-                    "sha256" : "998ffdc1b7879681ee6bc67bebfaa05a201cb642a7bac520365c5cb20235cd4a"
+                    "url" : "https://sonic3air.org/sonic3air_game.tar.gz",
+                    "sha256" : "4fda6c6b10399f62dfa61c329114e6cf866688e2ff9f68ac7b72ca2da38022fd"
                 },
                 {
                     "type" : "script",
@@ -83,9 +83,9 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/Kekun/sonic3air-launcher.git",
+                    "url" : "https://github.com/ArclightMat/sonic3air-launcher.git",
                     "branch" : "main",
-                    "commit" : "711904992931774daeec490ea251b96e1f732f1d"
+                    "commit" : "4f2ad33b1319bd74a9d54504fe12286386d86db8"
                 }
             ]
         }
