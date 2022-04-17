@@ -69,7 +69,6 @@
                 {
                     "type" : "script",
                     "commands" : [
-                        "#!/bin/sh",
                         "sonic3air-launcher && /app/bin/sonic3air_linux"
                     ],
                     "dest-filename" : "sonic3air"
