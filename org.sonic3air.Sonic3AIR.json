@@ -1,14 +1,13 @@
 {
     "app-id" : "org.sonic3air.Sonic3AIR",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "command" : "sonic3air",
     "finish-args" : [
         "--share=ipc",
         "--socket=pulseaudio",
-        "--socket=fallback-x11",
-        "--socket=wayland",
+        "--socket=x11",
         "--device=all",
         "--filesystem=~/.local/share/Steam/steamapps/common/Sega Classics/uncompressed ROMs/Sonic_Knuckles_wSonic3.bin:ro",
         "--filesystem=~/.steam/steam/steamapps/common/Sega Classics/uncompressed ROMs/Sonic_Knuckles_wSonic3.bin:ro",
@@ -63,8 +62,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://sonic3air.org/sonic3air_game.tar.gz",
-                    "sha256" : "4fda6c6b10399f62dfa61c329114e6cf866688e2ff9f68ac7b72ca2da38022fd"
+                    "url" : "https://github.com/Eukaryot/sonic3air/releases/download/v22.09.10.0-stable/sonic3air_game.tar.gz",
+                    "sha256" : "2c052dbd4e823a9700ac700f0fcf3deca943effd06004c52363844b5b0409634"
                 },
                 {
                     "type" : "script",
@@ -84,7 +83,7 @@
                     "type" : "git",
                     "url" : "https://github.com/ArclightMat/sonic3air-launcher.git",
                     "branch" : "main",
-                    "commit" : "4f2ad33b1319bd74a9d54504fe12286386d86db8"
+                    "commit" : "5878a45d22cab0160b0f713ab7a058aa2b94ab47"
                 }
             ]
         }
