@@ -1,7 +1,7 @@
 {
     "app-id" : "org.sonic3air.Sonic3AIR",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "sonic3air",
     "finish-args" : [
@@ -62,8 +62,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/Eukaryot/sonic3air/releases/download/v22.09.10.0-stable/sonic3air_game.tar.gz",
-                    "sha256" : "2c052dbd4e823a9700ac700f0fcf3deca943effd06004c52363844b5b0409634"
+                    "url" : "https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.tar.gz",
+                    "sha256" : "45e97c48513a7b466f5c55e766abad49c859ba0c7334f570da7cba2f5b143469"
                 },
                 {
                     "type" : "script",
