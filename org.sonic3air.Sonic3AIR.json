@@ -1,11 +1,12 @@
 {
     "app-id" : "org.sonic3air.Sonic3AIR",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "sonic3air",
     "finish-args" : [
         "--share=ipc",
+        "--share=network",
         "--socket=pulseaudio",
         "--socket=x11",
         "--device=all",
@@ -62,8 +63,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/Eukaryot/sonic3air/releases/download/v22.09.10.0-stable/sonic3air_game.tar.gz",
-                    "sha256" : "2c052dbd4e823a9700ac700f0fcf3deca943effd06004c52363844b5b0409634"
+                    "url" : "https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.tar.gz",
+                    "sha256" : "45e97c48513a7b466f5c55e766abad49c859ba0c7334f570da7cba2f5b143469"
                 },
                 {
                     "type" : "script",
@@ -83,7 +84,7 @@
                     "type" : "git",
                     "url" : "https://github.com/ArclightMat/sonic3air-launcher.git",
                     "branch" : "main",
-                    "commit" : "5878a45d22cab0160b0f713ab7a058aa2b94ab47"
+                    "commit" : "a406c69ae433a6e63649ede1c12c8b98e7344614"
                 }
             ]
         }
