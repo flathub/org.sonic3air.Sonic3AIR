@@ -84,7 +84,7 @@
                     "type" : "git",
                     "url" : "https://github.com/ArclightMat/sonic3air-launcher.git",
                     "branch" : "main",
-                    "commit" : "c60037fc4696696d45285a4ff177474c255819e9"
+                    "commit" : "8f6e795d4264bdcaa6a2cde2f7e773ca43633318"
                 }
             ]
         }
