@@ -40,8 +40,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.tar.gz",
-                    "sha256" : "502c4ca9d5cb52db4a25b860b1003949d9ae0697f37f6368098346e67654bb16"
+                    "url" : "https://github.com/Eukaryot/sonic3air/releases/download/v26.03.28.0-stable/sonic3air_game.tar.gz",
+                    "sha256" : "b8e268e09eb0bd8241f9e1b75be5b1ee42b8e7f1dbcea1181e54068fe5a8d7b0"
                 },
                 {
                     "type" : "file",

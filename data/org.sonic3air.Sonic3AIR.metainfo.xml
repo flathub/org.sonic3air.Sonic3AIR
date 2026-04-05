@@ -10,6 +10,7 @@
     <p>To play Sonic 3: Angel Island Revisited, you need Sonic 3 &amp; Knuckles from the SEGA Mega Drive &amp; Genesis Classics collection installed on Steam.</p>
   </description>
   <url type="homepage">https://sonic3air.org/</url>
+  <url type="vcs-browser">https://github.com/Eukaryot/sonic3air</url>
   <screenshots>
     <screenshot type="default">
       <image>https://sonic3air.org/images/icecap01.png</image>
@@ -26,6 +27,76 @@
     <name>Eukaryot</name>
   </developer>
   <releases>
+    <release type="stable" date="2026-03-29" urgency="medium" version="v26.03.28.0">
+      <description>
+        <p>New features and improvements</p>
+        <ul>
+          <li>Added an integrated file browser (in Options -> System) that allows for importing mod zips on Android and iOS/Web from the file system into S3AIR's app data</li>
+          <li>Save data is now stored across multiple files in "storage" inside your save data folder, making it easier to delete or backup individual files if needed</li>
+          <li>Added option for a hint on the hidden monitors that you can unveil with the signpost</li>
+          <li>Added options for several minor enhancements that have always been part of S3AIR, but could not be turned off before</li>
+          <li>A few more skippable cutscenes (end of LBZ 2, start of SSZ, DEZ act transition)</li>
+          <li>Performance optimizations for software renderer, specifically for rotated / scaled sprites display</li>
+        </ul>
+        <p>Bug fixes</p>
+        <ul>
+          <li>More precise ground collision check for spilled rings</li>
+          <li>Fix for an issue that could lead to a stuttering frame rate</li>
+          <li>Fixed several software renderer bugs</li>
+          <li>Fixed a bug that could cause a crash during paused competition mode and in AIZ 2 / MHZ 2 blimp sequences</li>
+          <li>Fixes for server communication issues that could randomly break both Ghost Sync and the Update Check</li>
+          <li>Fixed that selecting HPZ in Act Select started the Lava Reef 2 boss fight</li>
+          <li>Fixed a random emulated soundtrack issue with sped-up music playback</li>
+          <li>Fix for emulated S3A versions of mini-boss music and Knuckles theme</li>
+          <li>Fixed a bug that could lead to incorrect sprite rendering in mods</li>
+          <li>Fixed that pressing Numpad-9 leads to a broken rewind and game freeze if dev mode is disabled</li>
+          <li>Using proper animation for Tails carrying Sonic when exhausted underwater</li>
+          <li>Corrected render priority for the Egg Mobile after SOZ 2 boss fight</li>
+          <li>Fix for first Sonic outro win pose sprite position and rotation</li>
+          <li>Fixed that ground did not fade to white after finishing a stage in Blue Sphere game mode</li>
+          <li>Fixed a glitch in Act Select when starting a game during a transition of the zone preview slideshow</li>
+          <li>Fixed a layering issue inside certain graphics, like Tails' run sprites</li>
+          <li>Fix for a glitch when going back to the main menu immediately after entering Data Select (namely while still fading in)</li>
+          <li>Fix for a memory leak related to text rendering</li>
+          <li>Fixed a crash and errors when a modded font was loaded from a zip file or a path with non-ASCII characters</li>
+          <li>Additional checks to prevent the "type is not convertible to string" error when e.g. the active-mods.json is malformed</li>
+          <li>A bunch of more fixes for minor glitches and inconsistencies in animations and palettes</li>
+        </ul>
+        <p>Modding features &amp; improvements</p>
+        <ul>
+          <li>New dev mode menu system (toggle by pressing F1 when dev mode is enabled)</li>
+          <li>Dev mode can now be toggled in the options menu's system tab (requiring a manual restart afterwards)</li>
+          <li>Both Act Select and the Pause Menu are now implemented in scripts, making them fully moddable</li>
+          <li>Lemonscript now supports arrays - for details, see page 11 of the Oxygen Handbook</li>
+          <li>Added support for constant arrays of types float and double</li>
+          <li>Local variables are now generally preferred over globals with the same name</li>
+          <li>Reworked persistent data functions, so you can store data in individual files and optionally in a local folder for your mod</li>
+          <li>You can now declare unresolvable mod conflicts with other mods as errors in your mod.json, using "IsConflict" in the "OtherMods" section - see pages 5/6 of the Modding.pdf</li>
+          <li>Support for mods to use up to four players (see "UsesFeatures" section in Modding.pdf)</li>
+          <li>Removed the hard limit for number of sprites</li>
+          <li>Increased the maximum supported number of lines and colors per line in custom palettes from 64 to 256</li>
+          <li>"Renderer.enableSecondaryPalette" now supports screen heights over 254</li>
+          <li>F10 now also reloads modded audio</li>
+          <li>Fixed that "Volume" property in audio_replacements.json was ignored in most cases</li>
+          <li>On desktop platforms, config.json will now be preferred over settings.json for all properties that are defined in both</li>
+          <li>Script compile error if a constant or global variable default value is too large for the data</li>
+          <li>Fixed a script compile crash when using floating point values with bitwise operations</li>
+          <li>Fixed a crash when retrying a previously failed mod script compilation</li>
+          <li>Added stringformat support for float and double data types (using "%f")</li>
+          <li>Added variants of "System.getGlobalVariableValueByName" for float, double, string types</li>
+          <li>Revised random number generation and added new script functions "System.randomFloat" and "System.randRange" variants</li>
+          <li>Added "makeCallable" function to get a u32 address for script functions to be used in calls</li>
+          <li>Added "System.removePersistentData"</li>
+          <li>Support for custom palettes in sprite rendering via new SpriteHandle functions "setPalette", "setPrimaryPalette", "setSecondaryPalette"</li>
+          <li>Added alternative script function variants of SpriteHandle methods "setRotation", "setScale", "setTintColor", "setAddedColor"</li>
+          <li>Added BlendMode constants to cpp_core_functions.lemon</li>
+          <li>Added convenience script functions "getScreenCenterX" and "getScreenCenterY"</li>
+          <li>"Log" and "LogDec" can now also be used with float, double, and string values</li>
+          <li>Added "System.isDevModeActive" script function to check whether dev mode is enabled</li>
+          <li>Oxygen Handbook now includes a documentation for how to use automatic font effects like outlines and shadows</li>
+        </ul>
+      </description>
+    </release>
     <release type="stable" date="2024-02-01" urgency="medium" version="v24.02.02.1">
       <description>
         <p>New features and improvements</p>
