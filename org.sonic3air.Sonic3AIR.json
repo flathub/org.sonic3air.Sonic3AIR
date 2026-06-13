@@ -1,7 +1,7 @@
 {
     "app-id" : "org.sonic3air.Sonic3AIR",
     "runtime" : "org.freedesktop.Platform",
-    "runtime-version" : "24.08",
+    "runtime-version" : "25.08",
     "sdk" : "org.freedesktop.Sdk",
     "command" : "sonic3air",
     "finish-args" : [
@@ -25,17 +25,17 @@
             "name" : "sonic3air",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dp -m 755 sonic3air_linux /app/bin/sonic3air_linux",
-                "install -Dp -m 644 libdiscord_game_sdk.so /app/lib/libdiscord_game_sdk.so",
+                "install -Dm755 sonic3air_linux -t /app/bin/",
+                "install -Dm644 libdiscord_game_sdk.so -t /app/lib/",
                 "cp -r data /app/bin",
-                "install -Dp -m 644 config.json /app/bin/config.json",
-
-                "install -Dp -m 755 sonic3air-launcher.sh /app/bin/sonic3air",
-                
-                "install -Dp -m 644 org.sonic3air.Sonic3AIR.desktop /app/share/applications/org.sonic3air.Sonic3AIR.desktop",
-                "install -Dp -m 644 org.sonic3air.Sonic3AIR.png /app/share/icons/hicolor/256x256/apps/org.sonic3air.Sonic3AIR.png",
-                "install -Dp -m 644 org.sonic3air.Sonic3AIR.metainfo.xml /app/share/metainfo/org.sonic3air.Sonic3AIR.metainfo.xml"
-                
+                "install -Dm644 config.json -t /app/bin/",
+                "install -Dm755 sonic3air-launcher.sh /app/bin/sonic3air",
+                "install -Dm644 org.sonic3air.Sonic3AIR.desktop -t /app/share/applications/",
+                "install -Dm644 org.sonic3air.Sonic3AIR.png -t /app/share/icons/hicolor/256x256/apps/",
+                "install -Dm644 org.sonic3air.Sonic3AIR.metainfo.xml -t /app/share/metainfo/",
+                "install -Dm644 doc/license.txt -t $FLATPAK_DEST/share/licenses/$FLATPAK_ID/sonic3air/",
+                "mkdir -p $FLATPAK_DEST/share/licenses/$FLATPAK_ID/sonic3air/",
+                "cp -r doc/license-thirdparty $FLATPAK_DEST/share/licenses/$FLATPAK_ID/sonic3air/"
             ],
             "sources" : [
                 {
